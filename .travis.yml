@@ -5,6 +5,9 @@ php:
   - 7.0
   - 7.1
   - 7.2
+  - 7.3
+  - 7.4
+  - 8.0
   - nightly
 
 matrix:
@@ -13,13 +16,13 @@ matrix:
     - php: nightly
 
 install:
-        #  - if [[ "$TRAVIS_PHP_VERSION" != "nightly" ]]; then phpenv config-rm xdebug.ini; fi
-  - travis_retry composer self-update
-  - travis_retry composer install --prefer-dist --dev
+  - phpenv config-rm xdebug.ini || true
+  - travis_retry composer install --prefer-dist -n
 
 script:
   - mkdir -p build/logs
   - ./vendor/bin/phpunit -c phpunit.xml.dist
 
-after_script:
+after_success:
+  - composer require php-coveralls/php-coveralls
   - travis_retry vendor/bin/php-coveralls -v

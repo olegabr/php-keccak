@@ -1,7 +1,7 @@
 {
     "name": "olegabr/keccak",
     "description": "Pure PHP implementation of Keccak with PHP 5.6+ support",
-    "keywords": ["keccak", "sha-3"],
+    "keywords": ["keccak", "sha-3", "sha3-256"],
     "license": "MIT",
     "authors": [
         {
@@ -15,7 +15,7 @@
     ],
     "require": {
         "php": ">=5.6",
-        "ext-mbstring": "*"
+        "symfony/polyfill-mbstring": "~1.19.0"
     },
     "autoload": {
         "psr-4": {

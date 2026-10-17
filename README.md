@@ -1,4 +1,4 @@
-# php-keccak [![Build Status](https://travis-ci.org/olegabr/php-keccak.svg?branch=master)](https://travis-ci.org/olegabr/php-keccak)  [![Coverage Status](https://coveralls.io/repos/github/olegabr/php-keccak/badge.svg?branch=master)](https://coveralls.io/github/olegabr/php-keccak?branch=master)
+# php-keccak [![CI](https://github.com/olegabr/php-keccak/actions/workflows/ci.yml/badge.svg)](https://github.com/olegabr/php-keccak/actions/workflows/ci.yml)
 Pure PHP implementation of Keccak (SHA-3)
 
 ## Usage
